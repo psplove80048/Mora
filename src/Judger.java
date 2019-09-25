@@ -18,7 +18,7 @@ public class Judger {
 		
 		System.out.println("請輸入玩家姓名:");
 		person.inputName();
-		System.out.println(computer.getComName() + "VS" + person.getPlayerName());
+		System.out.println(computer.getPlayerName() + "VS" + person.getPlayerName());
 	}
 
 	public void playGame() {
@@ -26,7 +26,7 @@ public class Judger {
 		do {
 			System.out.println("請" + person.getPlayerName() + "出拳");
 			int personNum = person.myFist();
-			System.out.println("請" + computer.getComName() + "出拳");
+			System.out.println("請" + computer.getPlayerName() + "出拳");
 			int computerNum = computer.myFist();
 			
 			if(personNum == computerNum){
@@ -35,7 +35,7 @@ public class Judger {
 				System.out.println(person.getPlayerName() + "獲勝");
 				person.setWinningTimes(person.getWinningTimes()+1);
 			}else{
-				System.out.println(computer.getComName()+ "獲勝");
+				System.out.println(computer.getPlayerName()+ "獲勝");
 				computer.setWinningTimes(computer.getWinningTimes()+1);
 			}
 			total++;
@@ -46,7 +46,7 @@ public class Judger {
 
 	public void finalResult() {
 		System.out.println("一共玩了" + total+"次");
-		System.out.println(computer.getComName()+":"+computer.getWinningTimes() + "VS" +person.getPlayerName()+":"+ person.getWinningTimes());
+		System.out.println(computer.getPlayerName()+":"+computer.getWinningTimes() + "VS" +person.getPlayerName()+":"+ person.getWinningTimes());
 		
 	}
 	public static void main(String[] args) {
