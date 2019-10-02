@@ -1,9 +1,10 @@
 public class Judger {
 	private int total;
-	
+	//class
 	private Person person = new Person();
 	private Computer computer = new Computer();
-
+    
+	//start
 	public void startGame() {
 		
 		System.out.println("******²q®±¹CÀ¸*******");
@@ -49,6 +50,7 @@ public class Judger {
 		System.out.println(computer.getPlayerName()+":"+computer.getWinningTimes() + "VS" +person.getPlayerName()+":"+ person.getWinningTimes());
 		
 	}
+	//main
 	public static void main(String[] args) {
 		Judger j = new Judger();
 		j.startGame();
